@@ -15,7 +15,7 @@ const app = express();
 
 // Only allow the frontend's dev origin (or whatever CLIENT_ORIGIN is set to)
 // to call this API from the browser.
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || "https://commitee-tracker-mern.vercel.app/" }));
 app.use(express.json()); // parses JSON request bodies into req.body
 
 app.get("/", (req, res) => {
