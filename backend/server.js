@@ -36,7 +36,7 @@ const PORT = process.env.PORT || 5000;
 const ConnectDb = async () => {
     try {
         const connection = await mongoose.connect(
-            DB_URL,
+            process.env.MONGODB_URI,
         );
 
         if (connection.connection) {
