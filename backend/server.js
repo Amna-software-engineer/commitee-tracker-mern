@@ -32,8 +32,18 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-});
+
+const ConnectDb = async () => {
+    try {
+        const connection = await mongoose.connect(
+            DB_URL,
+        );
+
+        if (connection.connection) {
+            console.log("Database Connected Successfully!");
+        }
+    } catch (error) {
+        console.log("Something went wronge while connecting DB");
+    }
+};
+await ConnectDb();
