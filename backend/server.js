@@ -12,7 +12,8 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "https://commitee-tracker-mern.vercel.app/" }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || "https://commitee-tracker-mern.vercel.app/" , methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
