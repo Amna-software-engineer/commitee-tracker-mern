@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 
 import { connectDB } from "./src/config/db.js";
 import { notFound, errorHandler } from "./src/middleware/errorHandler.js";
