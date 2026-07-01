@@ -2,7 +2,7 @@
 // JSON headers, and error handling. Every backend controller responds with
 // JSON (either the resource or { message }), so we can share this everywhere.
 
-const BASE_URL = import.meta.env.VITE_API_URL || "https://commitee-tracker-mern-gw38.vercel.app/";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://commitee-tracker-mern-gw38.vercel.app/api";
 
 async function request(path, options = {}) {
   let res;
