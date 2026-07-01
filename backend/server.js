@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || "https://commitee-tracker-mern.vercel.app/" }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
